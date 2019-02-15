@@ -4,17 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
-  },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'logout', loadChildren: './logout/logout.module#LogoutPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'users', loadChildren: './users/users.module#UsersPageModule' },
+  { path: 'user/:id', loadChildren: './user/user.module#UserPageModule' },
+  { path: 'user-delete/:id', loadChildren: './user-delete/user-delete.module#UserDeletePageModule' },
+  { path: 'user-edit/:id', loadChildren: './user-edit/user-edit.module#UserEditPageModule' },
+  { path: 'user-create/:id', loadChildren: './user-create/user-create.module#UserCreatePageModule' }
 ];
 
 @NgModule({
